@@ -1,0 +1,702 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,100..900;1,9..144,100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+* {
+    font-family: "Poppins", sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    border: none;
+    outline: none;
+    scroll-behavior: smooth;
+}
+
+:root {
+    --bg-color: #f6f0d8; /* Macadamia sebagai background */
+    --text-color: #113047; /* Cool Blue sebagai teks utama */
+    --main-color: #b02a29; /* Redwood sebagai warna utama */
+    --secondary-color: #7394b9; /* Light Grayish sebagai warna sekunder */
+    --good-blue-: #ffff;
+}
+html {
+    font-size: 62.5%;
+    overflow-x: hidden;
+}
+
+body {
+    background-color: var(--bg-color);
+    color: var(--text-color);
+}
+
+section {
+    min-height: 100vh;
+    padding: 10rem 9% 2rem; /*10 rem = pt, 9% = px, 2rem = pb*/
+}
+/* header */
+
+.header {
+    position: fixed;
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2rem 9%;
+    background-color: var(--secondary-color);
+    z-index: 100;
+}
+
+.logo {
+    font-size: 2.5rem;
+    color: var(--text-color);
+    font-weight: 600;
+    cursor: default;
+}
+
+#menu-icon {
+    font-size: 3.6rem;
+    color: var(--text-color);
+    display: none;
+}
+
+.navbar a {
+    font-size: 1.7rem;
+    color: var(--text-color);
+    margin-left: 4rem;
+    transition: .3s;
+}
+
+.navbar a:hover, 
+.navbar a:active {
+    color: var(--main-color);
+}
+
+/* end header */
+
+/* Home */
+
+.home {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@keyframes floatimages {
+    0% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-2.4rem);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
+
+.home-content h5 {
+    font-size: 100px;
+    font-family: Montserrat;
+}
+
+.home-content h3:nth-of-type(2) {
+    margin-bottom: 2rem;
+}
+
+span {
+    color: var(--main-color);
+}
+
+.btn {
+    background: var(--main-color);
+    color: var(--secondary-color);
+    padding: 1rem 2.8rem;
+    border-radius: 4rem;
+    font-size: 1.6rem;
+    font-weight: 600;
+    letter-spacing: .1rem;
+    box-shadow: 0 0 1rem var(--main-color);
+    transition: .5s ease;
+}
+
+.btn:hover {
+    box-shadow: none;
+}
+
+/* end home */
+
+/* about */
+
+.about {
+    display: flex;
+    justify-content: flex-start; /* Mengubah dari center ke flex-start */
+    align-items: center;
+    gap: 10rem;
+    background-color: var(--secondary-color);
+}
+
+.about-img img {
+    width: 45rem;
+}
+
+.heading {
+    /* text-align: center; */
+    font-size: 4.5rem;
+}
+
+.about-content h2 {
+    color: var(--bg-color);
+}
+
+.about-content h3 {
+   font-size: 2.6rem;
+}
+
+.about-content p {
+    font-size: 1.7rem;
+    margin: 2rem 0 3rem;
+}
+
+/* end about */
+
+/* new services */
+
+.container {
+    text-align: center;
+    padding: 50px 20px;
+}
+
+.heading {
+    font-size: 2.5rem;
+    margin-bottom: 30px;
+}
+
+.box-container {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+@keyframes move {
+    0% {
+        transform: translateX(0);
+    }
+    50% {
+        transform: translateX(30px);
+    }
+    100% {
+        transform: translateX(0);
+    }
+}
+
+.box img {
+    width: 50px;
+    height: 50px;
+    transition: transform .5s ease; /* Transition effect for hover */
+    animation: move 3s infinite ease-in-out; /* Animasi gambar berjalan */
+}
+
+.box:hover img {
+    transform: scale(1.1); /* Membesarkan gambar saat hover */
+}
+
+span {
+    color: var(--main-color);
+}
+
+.box h3 {
+    margin: 10px 0 5px;
+    font-size: 1.5rem;
+    transition: transform .5s ease;
+}
+
+.box:hover h3 {
+    transform: scale(1.1); /* Membesarkan heading saat hover */
+}
+
+/* Services container styling */
+.services-container .service-box {
+    flex: 1 1 30rem;
+    background-color: var(--secondary-color);
+    padding: 3rem 2rem 4rem;
+    border-radius: 2rem;
+    text-align: center;
+    border: .2rem solid var(--bg-color);
+    transition: .5s ease;
+}
+
+/* Hover effect on service box */
+.services-container .service-box:hover {
+    border-color: var(--main-color);
+    transform: scale(1.03);
+}
+
+/* Additional hover effect for the entire box */
+.box:hover {
+    transform: scale(1.05); /* Membesarkan kotak saat hover */
+}
+
+/* end */
+
+/* project */
+
+.portofolio {
+    background: var(--secondary-color);
+}
+
+.portofolio h2 {
+    text-align: center;
+    font-size: 4.5rem;
+    margin-bottom: 4rem;
+}
+
+.portofolio-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    align-items: center;
+    gap: 2.5rem;
+}
+
+.portofolio-container .portofolio-box {
+    position: relative;
+    border-radius: 2rem;
+    display: flex;
+    overflow: hidden;
+}
+
+.portofolio-box img {
+    width: 100%;
+    transition: .5s ease;
+}
+
+.portofolio-box img:hover {
+    transform: scale(1.1);
+}
+
+.portofolio-box .portofolio-layer {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(rgba(0, 0, 0, .1), var(--main-color));
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 0 4rem;
+    transform: translateY(100%);
+    transition: .5s ease;
+}
+
+.portofolio-box:hover .portofolio-layer {
+    transform: translateY(0);
+}
+
+.portofolio-layer h4 {
+    font-size: 3rem;
+    color: var(--bg-color);
+}
+
+.portofolio-layer p {
+    font-size: 1.2rem;
+    margin: .3 0 1rem;
+    color: var(--bg-color);
+}
+
+.portofolio-layer a {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    background: var(--text-color);
+    width: 5rem;
+    height: 5rem;
+    border-radius: 50%;
+}
+
+.portofolio-layer i {
+    font-size: 2rem;
+    color: var(--secondary-color);
+}
+/* end */
+
+/* porto */
+
+.certificate-slider {
+    text-align: center;
+    padding: 3rem;
+    background-color: var(--bg-color);
+  }
+  
+  .heading {
+    font-size: 4rem;
+    margin-bottom: 2rem;
+  }
+  
+  .slider {
+    position: relative;
+    width: 60%;
+    margin: auto;
+    overflow: hidden;
+    margin-top: 4.5rem;
+  }
+  
+  .slides {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+  }
+  
+  .slide {
+    min-width: 100%;
+    height: auto;
+    padding-top: 4.5rem;
+  }
+  
+  button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: transparent;
+    color: var(--main-color);
+    border: none;
+    font-size: 5rem;
+    padding: 1rem;
+    cursor: pointer;
+    z-index: 1;
+  }
+  
+.prev {
+    left: 0px; 
+}
+
+.next {
+    right: 0px;
+}
+
+/* end porto */
+
+/* experiences */
+
+.container-experiences {
+    display: grid;
+    place-items: center;
+    margin-inline: 1.5rem;
+    padding-block: 5rem;
+    text-align: center;
+  }
+  
+  .card__container {
+    display: grid;
+    row-gap: 3.5rem;
+  }
+  
+  .card__article {
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .card__img {
+    width: 328px;
+    border-radius: 1.5rem;
+  }
+  
+  .card__data {
+    width: 280px;
+    background-color: var(--secondary-color);
+    padding: 1.5rem 2rem;
+    box-shadow: 0 8px 24px hsla(0, 0%, 0%, .15);
+    border-radius: 1rem;
+    position: absolute;
+    bottom: -9rem;
+    left: 0;
+    right: 0;
+    margin-inline: auto;
+    opacity: 0;
+    transition: opacity 1s 1s;
+  }
+  
+  .card__description {
+    display: block;
+    font-size: var(--small-font-size);
+    margin-bottom: .25rem;
+  }
+  
+  .card__title {
+    font-size: var(--h2-font-size);
+    font-weight: 500;
+    color: var(--title-color);
+    margin-bottom: .75rem;
+  }
+  
+  .card__button {
+    text-decoration: none;
+    font-size: var(--small-font-size);
+    font-weight: 500;
+    color: var(--first-color);
+  }
+  
+  .card__button:hover {
+    text-decoration: underline;
+  }
+  
+  /* Naming animations in hover */
+  .card__article:hover .card__data {
+    animation: show-data 1s forwards;
+    opacity: 1;
+    transition: opacity .3s;
+  }
+  
+  .card__article:hover {
+    animation: remove-overflow 2s forwards;
+  }
+  
+  .card__article:not(:hover) {
+    animation: show-overflow 2s forwards;
+  }
+  
+  .card__article:not(:hover) .card__data {
+    animation: remove-data 1s forwards;
+  }
+  
+  /* Card animation */
+  @keyframes show-data {
+    50% {
+      transform: translateY(-10rem);
+    }
+    100% {
+      transform: translateY(-7rem);
+    }
+  }
+  
+  @keyframes remove-overflow {
+    to {
+      overflow: initial;
+    }
+  }
+  
+  @keyframes remove-data {
+    0% {
+      transform: translateY(-7rem);
+    }
+    50% {
+      transform: translateY(-10rem);
+    }
+    100% {
+      transform: translateY(.5rem);
+    }
+  }
+  
+  @keyframes show-overflow {
+    0% {
+      overflow: initial;
+      pointer-events: none;
+    }
+    50% {
+      overflow: hidden;
+    }
+  }
+
+
+
+/* end expereience */
+
+/* contact */
+
+.contact h2 {
+    text-align: center;
+    font-size: 4.5rem;
+    margin-bottom: 4rem;
+}
+
+.contact form  {
+    max-width: 70rem;
+    text-align: center;
+    margin: 1rem auto;
+}
+
+.contact form .input-box {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.contact form .input-box input, 
+.contact form textarea {
+    width: 100%;
+    padding: 1.5rem;
+    font-size: 1.6rem;
+    color: var(--text-color);
+    background: var(--secondary-color);
+    border-radius: .8rem;
+    margin: .7rem 0;
+}
+
+.contact form .input-box input {
+    width: 49%;
+}
+
+.contact form textarea {
+    resize: none;
+}
+
+.contact form .btn {
+    margin-top: 2rem;
+    cursor: pointer;
+}
+
+/* end contact */
+
+/* footer */
+
+.footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 2rem 9%;
+    background: var(--secondary-color);
+}
+
+.footer-text p {
+    font-size: 1.6rem;
+}
+
+.footer-iconTop a {
+     display: inline-flex;
+     justify-content: center;
+     align-items: center;
+     padding: 0.8rem;
+     border-radius: 0.8rem;
+     background: var(--main-color);
+     transition: 0.5s ease;
+}
+
+.footer-iconTop a:hover {
+    box-shadow: 0 0 1rem var(--main-color);
+}
+
+.footer-iconTop a i {
+    font-size: 2.4rem;
+    color: var(--secondary-color);
+}
+
+/* breakpoins */
+
+/* 
+ukuran yang akan dipakai :
+1200px
+991px
+768px
+617px
+450px
+356px */
+
+@media(max-width : 1200px) {
+    html {
+        font-size: 55%;
+    }
+}
+@media(max-width : 991px) {
+    .header {
+        padding: 2rem 3%;
+    }
+    .section {
+        padding: 10rem 3% 2rem;
+    }
+    .portofolio {
+        padding-bottom: 7rem;
+    }
+    .contact {
+        min-height: auto;
+    }
+    .services {
+        padding-bottom: 7rem;
+    }
+    .footer {
+        padding: 2rem 3%;
+    }
+}
+@media(max-width : 768px) {
+    #menu-icon {
+        display: block;
+    }
+    .navbar {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        background: var(--bg-color);
+        padding: 1rem 3%;
+        box-shadow: 0 .5rem 1rem rgba(0,0,0, 2);
+        display: none;
+    }
+    .navbar.active {
+        display: block;
+    }
+    .navbar a {
+        display: block;
+        font-size: 2rem;
+        margin: 3rem 0;
+    }
+    .home {
+        flex-direction: column;
+    }
+    .home h3 {
+        font-size: 2.6rem;
+    }
+    .home h1 {
+        font-size: 5rem;
+    }
+    .home-img img {
+        width: 40vw;
+        margin-top: 4rem;
+    }
+    .about {
+        flex-direction: column;
+    }
+    .about img {
+        width: 40vw;
+        margin-top: 4rem;
+    }
+    .about-content {
+        padding-bottom: 4rem;
+    }
+    .services h2 {
+        margin-bottom: 3rem;
+    }
+    .portofolio h2 {
+        margin-bottom: 3rem;
+    }
+    .portofolio-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+@media(max-width : 617px) {
+    .portofolio-container {
+        grid-template-columns: 1fr;
+    }
+}
+@media(max-width : 450px) {
+    html {
+        font-size: 50%;
+    }
+    .contact form .input-box input {
+        width: 100%;
+    }
+}
+@media(max-width : 356px) {
+    .home-img img {
+        width: 65vw;
+    }
+    .about-img img {
+        width: 65vw;
+    }
+    .footer {
+        flex-direction: column;
+    }
+    .footer p {
+        text-align: center;
+        margin-bottom: 2rem;
+    }
+}
